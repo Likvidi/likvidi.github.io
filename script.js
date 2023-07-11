@@ -1,23 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Smooth nav menu scrolling
-  const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link");
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href");
+    // Check if it's an internal link
+    if (targetId.startsWith("#")) {
       e.preventDefault();
-      const targetId = this.getAttribute("href");
       const targetSection = document.querySelector(targetId);
       smoothScrollTo(targetSection);
-    });
+    }
+    // External links will function normally
   });
+});
 
-  function smoothScrollTo(targetSection) {
-    const top = targetSection.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-      top: top,
-      behavior: "smooth",
-    });
-  }
+function smoothScrollTo(targetSection) {
+  const top = targetSection.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: top,
+    behavior: "smooth",
+  });
+}
 
   // Mailchimp form popup
   var navButton = document.querySelector(".nav-button");

@@ -177,6 +177,11 @@ h1, h2, .large-headline {
     height: 41px;
 }
 
+.suma-logo {
+  width: 400px;
+  height: auto;
+}
+
 /* Navigation styles */
 nav {
   display: flex;
@@ -276,6 +281,7 @@ nav {
       display: none;
     }
 
+   
 
 }
 
@@ -314,6 +320,7 @@ nav {
     font-size: 40px;
     font-weight: bold; /* Regular weight */
     margin-bottom: 32px; /* Space between the h2 and paragraph */
+    color: #1A2421;
 }
 
 .saas-section p {
@@ -378,6 +385,11 @@ nav {
     .saas-section p {
         font-size: 14px;
         font-weight: bold;
+    }
+
+    .suma-logo {
+      width: 150px;
+      height: auto;
     }
 }
 
