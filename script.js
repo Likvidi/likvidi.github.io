@@ -1,3 +1,5 @@
+window.location.href = "http://sumaprotocol.com";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Smooth nav menu scrolling
 const navLinks = document.querySelectorAll(".nav-link");
